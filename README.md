@@ -1,17 +1,17 @@
-# TT-TinyConfig
+# String Store!
 
-I needed a way to pass around a light way set of key values without using JSON. The values will never be a complex object, so serializing them like a URL seemed like a half decent way to go
+Storage in a string - or something like that. I needed a way to pass around a light way set of key values without using JSON. The values will never be a complex object, so serializing them like a URL seemed like a half decent way to go
 
 ## Installation
 
 ```
-npm install tt-tinyconfig --save
+npm install string-store --save
 ```
 
 ## Example
 ```
-let TinyConfig = require('tt-tinyconfig');
-let config = new TinyConfig('name=brandon&active=true');
+let StringStore = require('string-store');
+let config = new StringStore('name=brandon&active=true');
 console.log(config.get('active'));
 ```
 
