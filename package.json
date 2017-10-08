@@ -1,6 +1,6 @@
 {
   "name": "string-store",
-  "version": "2.3.0",
+  "version": "2.3.1",
   "main": "index.js",
   "license": "MIT",
   "scripts": {
@@ -8,9 +8,9 @@
     "build": "babel src/ -d ./",
     "watch": "babel --watch=./src  src/ -d ./ --copy-files",
     "test": "node test/test.js",
-    "publish:patch" : "npm run build && npm run test && git add . && build/bump.sh patch",
-    "publish:minor" : "npm run build && npm run test && git add . && build/bump.sh minor",
-    "publish:major" : "npm run build && npm run test && git add . && build/bump.sh major"
+    "publish:patch": "npm run build && npm run test && git add . && build/bump.sh patch",
+    "publish:minor": "npm run build && npm run test && git add . && build/bump.sh minor",
+    "publish:major": "npm run build && npm run test && git add . && build/bump.sh major"
   },
   "typings": "index.d.ts",
   "engines": {
