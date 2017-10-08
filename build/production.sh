@@ -11,7 +11,7 @@ git commit -m "$VERSION $DATE production"
 
 git push origin master
 
-./bump.sh minor
+./build/bump.sh minor
 
 NEW_PACKAGE_VERSION=$(cat package.json \
   | grep version \
