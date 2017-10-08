@@ -133,3 +133,7 @@ console.log('✅ SUCCESSES: '+passed);
 console.log('🛑 FAILURES: '+failed);
 console.log("------------------------------------------------------------");
 console.log("");
+
+if(failed) {
+  throw("🛑  "+failed+" Tests Failed - will not build or publish");
+}
