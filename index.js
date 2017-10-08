@@ -1,9 +1,9 @@
 
 
 /**
- * Class TinyConfig
+ * Class StringStore
  */
-class TinyConfig {
+class StringStore {
 
   constructor(starterObj) {
     if (starterObj && typeof starterObj == 'object') {
@@ -45,7 +45,7 @@ class TinyConfig {
   /**
    * Parse a String
    * @param  {string} configString The string name=bob&age=123
-   * @return {Object}              Returns the TinyConfig data structure
+   * @return {Object}              Returns the StringStore data structure
    */
   parse(configString) {
     this.data = {};
@@ -134,4 +134,4 @@ class TinyConfig {
   }
 }
 
-module.exports = TinyConfig;
+module.exports = StringStore;

@@ -1,9 +1,9 @@
 //@flow
 
 /**
- * Class TinyConfig
+ * Class StringStore
  */
-class TinyConfig {
+class StringStore {
   data:any;
 
   constructor(starterObj:any) {
@@ -46,7 +46,7 @@ class TinyConfig {
   /**
    * Parse a String
    * @param  {string} configString The string name=bob&age=123
-   * @return {Object}              Returns the TinyConfig data structure
+   * @return {Object}              Returns the StringStore data structure
    */
   parse(configString:String):any {
     this.data = {};
@@ -136,4 +136,4 @@ class TinyConfig {
   }
 }
 
-module.exports = TinyConfig;
+module.exports = StringStore;

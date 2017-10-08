@@ -12,6 +12,12 @@ It turns ``active=true&tacos=good`` in to ``{ active: true, tacos: 'good' }`` an
 npm install string-store --save
 ```
 
+## Testing
+
+```
+npm run test
+```
+
 ## Example
 ```
 let StringStore = require('string-store');

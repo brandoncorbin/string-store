@@ -9,7 +9,7 @@ console.log("---- StringStore TEST");
 console.log("----");
 console.log("------------------------------------------------------------");
 
-let testString = "name=brandon&year=2004&active=false";
+let testString = "name=brandon&year=2004&active=false&width=0&stable=true&height=34.4";
 let testConfig = new StringStore(testString);
 let OutputTestString = testConfig.toString();
 
@@ -34,6 +34,35 @@ if(OutputTestString != testString) {
   passed++;
 }
 
+console.log("");
+console.log("------------------------------------------------------------");
+console.log("------------------------------------------------------------");
+console.log("");
+
+console.log("TEST: Numbers");
+
+if(typeof testConfig.get('width') == 'number' && typeof testConfig.get('height') == 'number') {
+  passed++;
+  console.log("✅ success: numbers worked as expected - including a 0");
+} else {
+  failed++;
+  console.log("🛑 failure:  numbers did not work as expectd", testConfig.toString());
+}
+
+console.log("");
+console.log("------------------------------------------------------------");
+console.log("------------------------------------------------------------");
+console.log("");
+
+console.log("TEST: Booleans");
+
+if(typeof testConfig.get('stable') == 'boolean' && typeof testConfig.get('active') == 'boolean') {
+  passed++;
+  console.log("✅ success: booleans worked as expected");
+} else {
+  failed++;
+  console.log("🛑 failure:  booleans did not work as expectd", testConfig.toString());
+}
 
 let inputObject = {
   year : 2017,
