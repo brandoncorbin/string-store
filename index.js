@@ -122,8 +122,12 @@ class TinyConfig {
           this.data[d] = "true";
         } else if (this.data[d] === false) {
           this.data[d] = "false";
+        } else if (this.data[d] === "undefined") {
+          this.data[d] = undefined;
         }
-        theString.push(d + '=' + encodeURIComponent(this.data[d]));
+        if (typeof this.data[d] != "undefined") {
+          theString.push(d + '=' + encodeURIComponent(this.data[d]));
+        }
       }
     }
     return theString.join('&');
